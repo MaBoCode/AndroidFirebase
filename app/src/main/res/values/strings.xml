@@ -1,4 +1,6 @@
 <resources>
-    <string name="app_name">app-template-java</string>
+    <string name="app_name">AndroidFirebase</string>
     <string name="splashscreen_title">SplashScreen</string>
+    <string name="log_in_txt"><![CDATA[<u>Log In</u>]]></string>
+    <string name="sign_up_txt"><![CDATA[<u>Sign Up</u>]]></string>
 </resources>

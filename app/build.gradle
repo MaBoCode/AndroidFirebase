@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'androidx.navigation.safeargs'
     id 'dagger.hilt.android.plugin'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -9,7 +10,7 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.example.app_template_java"
+        applicationId "com.example.androidfirebase"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode rootProject.ext.getVersionCode()
@@ -53,6 +54,11 @@ def rxAndroidVersion = "3.0.0"
 
 dependencies {
 
+    // Firebase
+    implementation platform('com.google.firebase:firebase-bom:26.3.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-auth'
+
     // RxJava and RxAndroid
     implementation "io.reactivex.rxjava3:rxjava:$rxJavaVersion"
     implementation "io.reactivex.rxjava3:rxandroid:$rxAndroidVersion"
@@ -94,4 +100,6 @@ dependencies {
 
     // Espresso
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.6'
 }
